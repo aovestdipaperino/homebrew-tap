@@ -1,8 +1,8 @@
 class Tokensave < Formula
   desc "Code intelligence tool that builds semantic knowledge graphs from 13 languages"
   homepage "https://github.com/aovestdipaperino/tokensave"
-  url "https://github.com/aovestdipaperino/tokensave/archive/refs/tags/v1.1.0.tar.gz"
-  sha256 "35ec313f6e269567433da787d22fea59e08e37535da9a2c5495b13f54ae56d36"
+  url "https://github.com/aovestdipaperino/tokensave/archive/refs/tags/v1.2.0.tar.gz"
+  sha256 "df2abc0bd628123838dab821036ee6ece150223c15f24695afc49c8eabf5dd22"
   license "MIT"
 
   depends_on "rust" => :build
