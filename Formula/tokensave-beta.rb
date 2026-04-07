@@ -1,14 +1,14 @@
 class TokensaveBeta < Formula
   desc "Code intelligence tool (beta channel)"
   homepage "https://github.com/aovestdipaperino/tokensave"
-  url "https://github.com/aovestdipaperino/tokensave/archive/refs/tags/v4.0.2-beta.1.tar.gz"
-  sha256 "ef5939247caabd0ce50abe72814836d27d55644d2a9530706b2d7bea5956745a"
+  url "https://github.com/aovestdipaperino/tokensave/archive/refs/tags/v4.1.0-beta.1.tar.gz"
+  sha256 "4a5300fa40d5c6d05bc55982e9a922c448e79229a901faf832c2d93a4c22fc8c"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/aovestdipaperino/tokensave/releases/download/v4.0.2-beta.1"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma: "043f08a7811a98ceb979eb4c92c55a7e331a69e4786d171a0c2b7beaeb8d166d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "aea4ccedd3be3f91028569f3c9bd291d3fcc34d31921a71e2fc06817c89d2454"
+    root_url "https://github.com/aovestdipaperino/tokensave/releases/download/v4.1.0-beta.1"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "9e35252fb18a0869e0c94011f54dbf04ee9864682b8f3e48fccaba2fb7a380cd"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "fb3523bd3b3f3309fe73bc12f51aed93202cf4aceed14b7435b45b125d8c5c93"
   end
 
   depends_on "rust" => :build
