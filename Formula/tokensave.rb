@@ -1,14 +1,14 @@
 class Tokensave < Formula
   desc "Code intelligence tool that builds semantic knowledge graphs from source code"
   homepage "https://github.com/aovestdipaperino/tokensave"
-  url "https://github.com/aovestdipaperino/tokensave/archive/refs/tags/v4.5.0.tar.gz"
-  sha256 "4972e21cc8b9297bfa6638e1407b3292c9bccdc2730775ce756b149311680a9a"
+  url "https://github.com/aovestdipaperino/tokensave/archive/refs/tags/v4.5.1.tar.gz"
+  sha256 "6d6ae39b9a13cf9443b852cf23f88b9e4ebdfd9835ff2d449b937473b1162c94"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/aovestdipaperino/tokensave/releases/download/v4.5.0"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma: "b7b587299075a9be750da27a187ac6f5c761ea14b45fa9e1d6c468ed9985ad63"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "95b74dcd743e1c46a09b5346cb0880b4eff78bdeb59290da1105b2b83062a59a"
+    root_url "https://github.com/aovestdipaperino/tokensave/releases/download/v4.5.1"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "bd2ee5d4cee99bd5eb69754a9333332b743c2eb002ecb35d91d1fb93d1dc8936"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "353e10b4cf6c832a1d0f80da50620179145f06a3732d1f2666292ae34b4d3047"
   end
 
   depends_on "rust" => :build
