@@ -1,17 +1,17 @@
 class PlankBeta < Formula
   desc "Interactive coding agent with a terminal REPL (beta channel)"
   homepage "https://github.com/aovestdipaperino/plank"
-  url "https://github.com/aovestdipaperino/plank/archive/refs/tags/v1.2.0.tar.gz"
-  sha256 "a2600d9400f52a24e4a3edeeda879be3ba1a435defac90963e3191cb1e31a767"
+  url "https://github.com/aovestdipaperino/plank/archive/refs/tags/v1.2.1.tar.gz"
+  sha256 "13e0d5ba012575513b8d219e476561a0e82b0a2f5563e397899fc99cc3f30a49"
   license "MIT"
 
   depends_on :macos
   depends_on "rust" => :build
 
   bottle do
-    root_url "https://github.com/aovestdipaperino/plank/releases/download/v1.2.0"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "33e233bb8b7d5f9401617f11df405379de3862752338fd78646dd9a4df3638b7"
-    sha256 cellar: :any_skip_relocation, sequoia: "e3b9af7b075163743a3fb49b0ae8a359401f62af6987de3e45e300a09d016052"
+    root_url "https://github.com/aovestdipaperino/plank/releases/download/v1.2.1"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "1e727309e87a83e9d2c72bdb941016dcff6ddb4785905c9b860ff33710e890fc"
+    sha256 cellar: :any_skip_relocation, sequoia: "f95f5567b95bb0680b4cb93a96e999a01ea96847c95d4427707e4fe512c9fa59"
   end
   conflicts_with "plank", because: "both install a plank binary"
   def install
