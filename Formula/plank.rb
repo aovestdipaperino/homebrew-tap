@@ -1,21 +1,25 @@
 class Plank < Formula
   desc "Interactive coding agent with a terminal REPL (Rust port of ds4)"
   homepage "https://github.com/aovestdipaperino/plank"
-  url "https://github.com/aovestdipaperino/plank/archive/refs/tags/v0.9.9.tar.gz"
-  sha256 "0965c592a6a7aa5800bf60c1ac2a2e85c3b98dfa4cdd2ccf96de974801dc7ce7"
+  url "https://github.com/aovestdipaperino/plank/archive/refs/tags/v0.9.10.tar.gz"
+  sha256 "7ff11a38f6e4d602992d145d280c40bae8d86376d97632f489f8e1585a6fc7fa"
   license "MIT"
 
   depends_on :macos
   depends_on "rust" => :build
 
   bottle do
-    root_url "https://github.com/aovestdipaperino/plank/releases/download/v0.9.9"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "d6a87c7adfd953beededb984c1fd0cfb0e924f592e9114db112e60a361148ed3"
-    sha256 cellar: :any_skip_relocation, sequoia: "e65c76e729cdeeb125985b909df6ddf9c85f2603c229164c38375eff3bb990d4"
+    root_url "https://github.com/aovestdipaperino/plank/releases/download/v0.9.10"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "3276b3342436c754676000b37b2558e4c342e15f0ea49487f3e9a100f0f1d6b3"
+    sha256 cellar: :any_skip_relocation, sequoia: "0c393ca98542bb3f00da35f614da4279c899418e25e450d24c7362834f19c70f"
   end
 
   def install
     system "cargo", "install", *std_cargo_args
+    # Metal kernel sources are only present when building from a
+    # checkout with the ds4-ref submodule; the GitHub source tarball
+    # lacks them (EchoEngine-only build).
+    (pkgshare/"metal").install Dir["ds4-ref/metal/*.metal"] unless Dir["ds4-ref/metal/*.metal"].empty?
   end
 
   test do
