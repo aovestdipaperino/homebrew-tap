@@ -1,25 +1,25 @@
 class PlankBeta < Formula
   desc "Interactive coding agent with a terminal REPL (beta channel)"
   homepage "https://github.com/aovestdipaperino/plank"
-  url "https://github.com/aovestdipaperino/plank/archive/refs/tags/v2.0.0.tar.gz"
-  sha256 "d8ff2aaa39b6507cb2f025c0ce3111bae5deaff33a855a1b59e4376a3d733fbc"
+  url "https://github.com/aovestdipaperino/plank/archive/refs/tags/v2.0.1.tar.gz"
+  sha256 "23f18202be13fac16be959425c2afca4686ccb9510e1f12fbcd2d1c653ebe197"
   license "MIT"
 
   depends_on :macos
   depends_on "rust" => :build
 
   bottle do
-    root_url "https://github.com/aovestdipaperino/plank/releases/download/v2.0.0"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "3ed5519a36ce904d6e415ec541e469bc8404c6c339303e682af4d093b8553378"
-    sha256 cellar: :any_skip_relocation, sequoia: "b79158531c54d45bed34d2fa1d25432d6740c52b02f18aa20deaa346a9957268"
+    root_url "https://github.com/aovestdipaperino/plank/releases/download/v2.0.1"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "398b84065b384977d9dffea2e7809c6281af3d907ead41fd022b28e0a37751db"
+    sha256 cellar: :any_skip_relocation, sequoia: "2bd2590ab1d5512a24ee8358f1b731876a6ee40e842d475a15bfdb724df7c6d7"
   end
   conflicts_with "plank", because: "both install a plank binary"
   def install
     system "cargo", "install", *std_cargo_args
     # Metal kernel sources are only present when building from a
-    # checkout with the ds4-ref submodule; the GitHub source tarball
+    # checkout with the refs/ds4 submodule; the GitHub source tarball
     # lacks them (EchoEngine-only build).
-    (pkgshare/"metal").install Dir["ds4-ref/metal/*.metal"] unless Dir["ds4-ref/metal/*.metal"].empty?
+    (pkgshare/"metal").install Dir["refs/ds4/metal/*.metal"] unless Dir["refs/ds4/metal/*.metal"].empty?
   end
 
   test do
