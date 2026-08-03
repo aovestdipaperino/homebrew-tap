@@ -1,17 +1,20 @@
 class PlankAgent < Formula
   desc "Interactive coding agent with a terminal REPL (Rust port of ds4)"
   homepage "https://github.com/aovestdipaperino/plank"
-  url "https://github.com/aovestdipaperino/plank/archive/refs/tags/v2.7.0.tar.gz"
-  sha256 "d75261d8efb662cfe9b693132e45ba782e78c6335987e74b8bfacb188c5409bc"
+  url "https://github.com/aovestdipaperino/plank/archive/refs/tags/v2.8.0.tar.gz"
+  sha256 "c473b8761ab97e6482440b0a0f03db8a544c04d850c4e0c0506363f590c65f79"
   license "MIT"
 
   depends_on :macos
+  # arm64 only: the ds4 Metal backend cannot run on Intel, so a source
+  # build there would spend twenty minutes producing a binary with no
+  # inference engine. Refuse up front instead of shipping that.
+  depends_on arch: :arm64
   depends_on "rust" => :build
 
   bottle do
-    root_url "https://github.com/aovestdipaperino/plank/releases/download/v2.7.0"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "634b98f9ca1f0617ab383b8e7f6881b76b798d9d6375a5f36bcc7b2a8c98a0c8"
-    sha256 cellar: :any_skip_relocation, sequoia: "9fdfe56722570a99f66123ac1d32a54fced8099a0e9cc0178de46dd5c82ad149"
+    root_url "https://github.com/aovestdipaperino/plank/releases/download/v2.8.0"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "ccdf676ae51b52705c5e5fd3ce94a51a03c22da2222cf9cc110ebe40e017f612"
   end
 
   def install
