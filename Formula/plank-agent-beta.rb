@@ -6,12 +6,15 @@ class PlankAgentBeta < Formula
   license "MIT"
 
   depends_on :macos
+  # arm64 only: the ds4 Metal backend cannot run on Intel, so a source
+  # build there would spend twenty minutes producing a binary with no
+  # inference engine. Refuse up front instead of shipping that.
+  depends_on arch: :arm64
   depends_on "rust" => :build
 
   bottle do
     root_url "https://github.com/aovestdipaperino/plank/releases/download/v2.7.9"
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "7f428d4ab43d6ad01460e6716124be4766ef49008d39be5f6a532c088261d30e"
-    sha256 cellar: :any_skip_relocation, sequoia: "3149d6e4c01f31b83d7aeb7731072affe9b4b458cc51cf0a5a5ab094546b1881"
   end
   conflicts_with "plank-agent", because: "both install a plank binary"
   def install
