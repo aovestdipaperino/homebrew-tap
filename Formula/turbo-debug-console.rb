@@ -1,8 +1,8 @@
 class TurboDebugConsole < Formula
   desc "Turbo Vision debug console for live token streams"
   homepage "https://github.com/aovestdipaperino/turbo-debug-console"
-  url "https://github.com/aovestdipaperino/turbo-debug-console/archive/refs/tags/v0.1.1.tar.gz"
-  sha256 "82242da339c443a91bff76d8d23e46240e427a0d83240bd00af0763bd6b3dfd9"
+  url "https://github.com/aovestdipaperino/turbo-debug-console/archive/refs/tags/v0.2.0.tar.gz"
+  sha256 "77bdcac455a0185728cbc8787292aa069fec2b899caa642a9bca4ed3c8da4240"
   license "MIT"
 
   depends_on "rust" => :build
