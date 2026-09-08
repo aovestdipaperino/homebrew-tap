@@ -1,8 +1,8 @@
 class PlankAgentBeta < Formula
   desc "Interactive coding agent with a terminal REPL (beta channel)"
   homepage "https://github.com/aovestdipaperino/plank"
-  url "https://github.com/aovestdipaperino/plank/archive/refs/tags/v4.4.1.tar.gz"
-  sha256 "a88757c6d005d246858061a32105417531f8ce66a65e5b66b9bdb434d007158d"
+  url "https://github.com/aovestdipaperino/plank/archive/refs/tags/v4.5.1.tar.gz"
+  sha256 "9a12e7b954f32310b3f992f07539d22a1aac1ceae26601300f8555a41d1abbf1"
   license "MIT"
 
   depends_on :macos
@@ -13,8 +13,8 @@ class PlankAgentBeta < Formula
   depends_on "rust" => :build
 
   bottle do
-    root_url "https://github.com/aovestdipaperino/plank/releases/download/v4.4.1"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "ade0ba598993f42f993e163851dd4ab16740b464dde182a0fb14d9ae56601d02"
+    root_url "https://github.com/aovestdipaperino/plank/releases/download/v4.5.1"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "242a327ee3cfb4ecde8ac9ce478ad61269735a5ae3ccfbdd9c29c0bea442dc56"
   end
   conflicts_with "plank-agent", because: "both install a plank binary"
   def install
