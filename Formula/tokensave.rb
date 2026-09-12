@@ -7,7 +7,6 @@ class Tokensave < Formula
 
   bottle do
     root_url "https://github.com/aovestdipaperino/tokensave/releases/download/v7.12.0"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma: ""
     sha256 cellar: :any_skip_relocation, x86_64_linux: "9179be4794c26b261365efeed6f8f3304ece62850801f682fd61cd4783e60256"
   end
 
