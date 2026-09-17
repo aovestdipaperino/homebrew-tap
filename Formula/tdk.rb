@@ -1,8 +1,8 @@
 class Tdk < Formula
   desc "Turbo Vision debug console for live token streams"
   homepage "https://github.com/aovestdipaperino/tdk"
-  url "https://github.com/aovestdipaperino/tdk/archive/refs/tags/v0.6.0.tar.gz"
-  sha256 "35fb8403b8c804495c5de905ec626dc39c16232377a2465896fe74f55c534f73"
+  url "https://github.com/aovestdipaperino/tdk/archive/refs/tags/v0.6.1.tar.gz"
+  sha256 "76da1888741ea5744566a4a9bdcb3691b69c460ed14c45d657c42d6196f4b6e5"
   license "MIT"
 
   depends_on "rust" => :build
