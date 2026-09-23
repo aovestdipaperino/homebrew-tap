@@ -1,8 +1,8 @@
 class PlankAgent < Formula
   desc "Interactive coding agent with a terminal REPL (Rust port of ds4)"
   homepage "https://github.com/aovestdipaperino/plank"
-  url "https://github.com/aovestdipaperino/plank/archive/refs/tags/v5.2.0.tar.gz"
-  sha256 "e5f4397fc8b1f4787222dbf45c8ed4e3df82cecb2c251faabf4dcc1578697006"
+  url "https://github.com/aovestdipaperino/plank/archive/refs/tags/v5.3.0.tar.gz"
+  sha256 "dd79d2a42e4c19f657c79b272e49630704a167cb7812b684ebfa4e66c40e8ba0"
   license "MIT"
 
   depends_on :macos
@@ -13,8 +13,8 @@ class PlankAgent < Formula
   depends_on "rust" => :build
 
   bottle do
-    root_url "https://github.com/aovestdipaperino/plank/releases/download/v5.2.0"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "8343bae49ad1de9e9ae48c816df8a94b6d622556e2478de46953727b688c7d2d"
+    root_url "https://github.com/aovestdipaperino/plank/releases/download/v5.3.0"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "ab349da3c580f19d651972ab9ba7df437f65eacd502754bfc3bc2b4d411b034f"
   end
 
   def install
