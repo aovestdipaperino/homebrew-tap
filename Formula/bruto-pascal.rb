@@ -7,8 +7,8 @@ class BrutoPascal < Formula
 
   bottle do
     root_url "https://github.com/aovestdipaperino/bruto-pascal/releases/download/v1.0.3"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma: "0a4fe138a61cf50d8d604783b1526107d9f4cd3adb1f7dc1840bbb384f91ad2b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "4ee5f76b849ab336134d2c16df1965f683d6c28219279bb9abb7502671f2195e"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "66ca23cee7cc6a07f8a211cf6ec9e94b7b56a67d88cdd7a4d0d6063d6358c10f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "78fb84ca05610bd473ce95ddc1d663d3861e00d734ce1dec685e6ba93143b9f6"
   end
 
   depends_on "llvm@18"
